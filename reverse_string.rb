@@ -9,19 +9,20 @@ require 'benchmark'
 def reverse_one(string)
   len = string.length
 
-  (len / 2).times do |letter|
-    string[-1 - letter], string[letter] = string[letter] , string[-1 - letter]
+  (len / 2).times do |index|
+    string[-1 - index], string[index] = string[index] , string[-1 - index]
   end
 
   return string
 end
 
 def reverse_two(string)
-  puts string.split("").reverse.join("")
+  return string.split("").reverse.join("")
 end
 
-puts Benchmark
-
-
-p reverse_one 'ambreen'
-p reverse_two 'hello how are you'
+puts "~~~~~FIRST IMPLEMENTATION~~~~~"
+puts Benchmark.measure {reverse_one 'ambreen'}
+puts Benchmark.measure {reverse_one 'hello how are you'}
+puts "~~~~~SECOND IMPLEMENTATION~~~~~"
+puts Benchmark.measure {reverse_two 'ambreen'}
+puts Benchmark.measure {reverse_two 'hello how are you'}
