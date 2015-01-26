@@ -1,12 +1,14 @@
 def unique_characters_in_a_string(string)
-  counts = {}
+  # counts = {}
 
-  string.downcase.each_char do |char|
-    next if char == " "
-    counts[char] = 0 unless counts.include?(char)
-    counts[char] += 1
-  end
-  p counts
+  # string.downcase.each_char do |char|
+  #   next if char == " "
+  #   counts[char] = 0 unless counts.include?(char)
+  #   counts[char] += 1
+  # end
+  # p counts
+
+
 end
 
 string = "ambreen"
