@@ -1,13 +1,12 @@
 function wordCloud(sentence) {
-  puncuation = [".", ",", "/", "?", "!", "'", "(", ")"];
 
-  puncuation.forEach(function(value, index){
-    sentence = sentence.replace(value, "")
-  });
+  sentence = sentence.replace(/[\.,-\/#!?$%\^&\*;:{}=\-_`~()]/g,"");
 
-  newSentence = sentence.toLowerCase().split(" ");
+  sentence = sentence.replace(/\s{2,}/g,"");
 
-  word_count = {};
+  var newSentence = sentence.toLowerCase().split(" ");
+
+  var word_count = {};
 
   for (var i = 0; i < newSentence.length; i++) {
     word_count[newSentence[i]] = 0
