@@ -35,7 +35,7 @@ list_one = [2, 7, 10] # bigger nums
 list_two = [1, 3, 5] # smaller nums
 p concat_list_take_one(list_one, list_two)
 p concat_list_take_two(list_one, list_two)
-# p concat_list(list_one, list_two) == [1, 2, 3, 5, 7, 10]
+# p concat_list_take_one(list_one, list_two) == [1, 2, 3, 5, 7, 10]
 
 puts "Benchmark Tests"
 puts "Take One:"
